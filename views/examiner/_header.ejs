@@ -1,0 +1,32 @@
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/users/examiner/Dashboard" class="nav-link px-2 link-secondary">Home</a></li>
+        <!-- <li><a href="/users/add-user" class="nav-link px-2 link-dark">User</a></li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="dropdown05" data-bs-toggle="dropdown" aria-expanded="false" onmouseover="this.style.cursor='pointer'">Exam</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown05">
+            <li><a class="dropdown-item" href="/users/examiner/add-exam">Add Exam</a></li>
+            <li><a class="dropdown-item" href="/users/examiner/view-exam">View Exam</a></li>
+          </ul>
+        </li>
+        <li><a href="/users/examiner/add-question" class="nav-link px-2 link-secondary">Add Question</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <% if(locals.user) { %>           
+          <i class="fa-solid fa-user"></i>
+          <%= user.firstname+" "+ user.lastname%>
+          <a href="/users/sign-out" ><button type="button" class="btn btn-primary">Sign-out</button></a> 
+        <% }else { %>
+          <button type="button"  href="/sign-in" class="btn btn-outline-primary me-2">Login</button>
+        <% } %>     
+      </div>
+
+
+    </header>
+  </div>

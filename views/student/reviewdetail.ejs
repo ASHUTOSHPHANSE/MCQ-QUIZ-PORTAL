@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="/css/student/reviewdetail.css">
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>
+                             <%= exam.name %>
+                        </h4>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h6>
+                            You got <%= totalM %> marks out of <%= exam.marks %>  ( <%= ( totalM /  exam.marks )*100 %>% )
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% for (question of questions) { %>
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.&nbsp; </h3>
+                            <h5 class="mt-1 ml-2">
+                                <%= question.question.content %>
+                            </h5>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.chosenoption=="option1") { %>
+                                data-ischecked="true"
+                             <% } %>  <% if(question.answer=="option1") { %>
+                                data-iscorrect="true"
+                            <%}%>> <span >
+                                    <%= question.question.option1 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.chosenoption=="option2") { %>
+                                data-ischecked="true"
+                             <% } %> <% if(question.answer=="option2") { %>
+                                data-iscorrect="true"
+                            <%}%> >
+                              <span >
+                                    <%= question.question.option2 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.chosenoption=="option3") { %>
+                                data-ischecked="true"
+                             <% } %> <% if(question.answer=="option3") { %>
+                                data-iscorrect="true"
+                            <%}%>>
+                             
+                                <span>
+                                    <%= question.question.option3 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.chosenoption=="option4") { %>
+                                data-ischecked="true"
+                             <% } %> <% if(question.answer=="option4") { %>
+                                data-iscorrect="true"
+                            <%}%>>
+                              <span>
+                                    <%= question.question.option4 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <br> 
+                            <% if(question.chosenoption == question.answer) {%>
+                                <h6> Correct Answer : <%= question.question.mark %> / <%= question.question.mark %> </h6>
+                                 
+                                 <% } else {%>
+                                    <h6> Incorrect Answer : 0 / <%= question.question.mark %> </h6>
+                                    <% } %>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%} %>
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <div class="ans ml-2">             
+                                <span>
+
+                                </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+         
+</div>

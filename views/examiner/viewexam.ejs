@@ -1,0 +1,57 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/examiner/viewexam.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<center>
+    <h2><b>
+            <%= title %>
+        </b></h2>
+</center>
+
+<div class="content">
+
+    <div class="container">
+
+        <div class="table-responsive">
+
+            <table class="table table-striped custom-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Marks</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="view-user-table">
+                    <% for (exam of exams) { %>
+                        <tr scope="row" id="exam-<%= exam._id %>" >
+                            <td> <%= exam.course.coursename %> </td>
+                            <td> <%= exam.name %> </td>
+                            <td> <%= exam.description %> </td>
+                            <td> <%= exam.marks %> </td>
+                            <td>
+                                <%= exam.starttime.getDate()+"/"+(exam.starttime.getMonth()+1)+"/"+ exam.starttime.getFullYear()+"  "+exam.starttime.getHours()+":"+exam.starttime.getMinutes() %>
+                            </td>
+                            <td> <%= exam.duration+" Min" %> </td>
+                            <td> <a href="/users/examiner/exam-details/<%= exam._id %>">View Details</a> &nbsp;|&nbsp; <a href="/users/examiner/destroyE/<%= exam._id %>"> Delete</a> </td>
+                        </tr>
+                    <% }%>
+
+            
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="/js/examiner/viewexam.js"></script>

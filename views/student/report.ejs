@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/student/report.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<center>
+    <h2><b>
+            View Reports
+        </b></h2>
+</center>
+
+<div class="content">
+
+    <div class="container">
+        <div class="table-responsive">
+
+            <table class="table table-striped custom-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">Exam Name</th>
+                        <th scope="col">Exam Description</th>
+                        <th scope="col">Total Marks</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="view-user-table">
+                    <% for (i of student.attempts) {%>
+                        <tr scope="row" id="user-<%= i.id %>">
+                            <td>
+                                <%= i.course.coursename %>
+                            </td>
+                            <td>
+                                <%= i.name %>
+                            </td>
+                            <td>
+                                <%= i.description %>
+                            </td>
+                            <td>
+                                <%= i.marks %>
+                            </td>
+                            <td>
+                                <a href="/students/review-detail/<%=i._id%>"> View Review </a>
+                            </td>
+                        </tr>
+                        <% } %>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="/js/student/report.js"></script>

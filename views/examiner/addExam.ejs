@@ -1,0 +1,35 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/examiner/addexam.css">
+
+<div class="container1">
+  <form action="/users/examiner/create-exam" method="post"> 
+    <h1><%= title %> - <%=course.coursename%> </h1>
+
+    <div class="form-group">
+      <input type="text" name="name" required="required"/>
+      <label for="input" class="control-label">Name</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+        <textarea name="description" required="required"></textarea>
+        <label for="textarea" class="control-label">Description</label><i class="bar"></i>
+      </div>
+
+    <div class="form-group">
+        <input type="number" name="duration" required="required"/>
+        <label for="input" class="control-label">Duration (min)</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input type="datetime-local" name="starttime" required="required"/>
+        <label for="input" class="control-label">Date</label><i class="bar"></i>
+      </div>
+    <div class="form-group">
+      <input type="number" name="marks" required="required"/>
+      <label for="input" class="control-label">Marks</label><i class="bar"></i>
+    </div>
+
+<div class="button-container">
+  <button type="submit" class="button"><span>Submit</span></button>
+</div>
+  </form>
+
+</div>

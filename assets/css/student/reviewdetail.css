@@ -1,0 +1,65 @@
+body{
+    background-color:#eee;
+}
+.delete-question-button {
+  text-decoration: none;
+  color: white;
+}
+.delete-question-button:hover {
+  color: white;
+}
+label.radio {
+  width: 95%;
+  cursor: pointer;
+}
+
+label.radio input {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+label.radio span {
+  padding: 10px;
+  border: 1px solid red;
+  display: inline-block;
+  color: red;
+  width: 100%;
+  /* text-align: center; */
+  border-radius: 3px;
+  margin-top: 7px; 
+  text-transform: uppercase;
+}
+
+label.radio [data-ischecked="true"]+ span{
+  border-color: red;
+  background-color: red;
+  color: #fff;
+}
+
+label.radio [data-iscorrect="true"]+span {
+  border-color: lightgreen;
+  background-color: lightgreen;
+  color: brown;
+}
+
+.ans {
+  margin-left: 36px !important;
+}
+
+.btn:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.btn:active {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.marks-d {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+}

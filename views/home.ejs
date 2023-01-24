@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Homepage </title>
+
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/css/bootstrap.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.2/css/boxicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.3/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+	<link rel="stylesheet" href="/css/homepage.css">
+	<!-- <script src="https://kit.fontawesome.com/0e4041a569.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+	<header id="header" class="fixed-top">
+		<div class="container d-flex align-items-center">
+
+			<h1 class="logo me-auto"><a href="/">QUIZIFY</a></h1>
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+				<ul>
+					<li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+					<li> <a class="nav-link scrollto" href="#panels"> Panels </a> </li>
+					<li> <a class="nav-link scrollto" href="#doctors"> Teams </a> </li>
+					<li> <a class="nav-link scrollto" href="#hero"> About </a> </li>
+					<li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+
+		</div>
+	</header><!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<!-- <div id="logo-h">
+		<div id="logo-img"> <img src="/images/toplogo.png"> </div>
+	</div> -->
+	<section id="hero" class="d-flex align-items-center">
+		<div class="container">
+			<h1>Welcome to Quizify</h1>
+			<h2>Quizify the only solution to online exams ... </h2>
+			<a href="#panels" class="btn-get-started scrollto">GO to LOGIN..</a>
+		</div>
+	</section><!-- End Hero -->
+
+
+	<!-- ======= Why Us Section ======= -->
+	<section id="why-us" class="why-us">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-4 d-flex align-items-stretch">
+					<div class="content">
+						<h3>Why Choose Exam Portal</h3>
+						<p>
+							The Examination Section is aware of the need for reforms in traditional examination and
+							assessment system and is continuously striving towards evolving a credible, valid, effective
+							and transparent evaluation system that addresses the challenges and newer demands of the
+							outside world.
+						</p>
+						<div class="text-center">
+							<a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 d-flex align-items-stretch">
+					<div class="icon-boxes d-flex flex-column justify-content-center">
+						<div class="row">
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box mt-4 mt-xl-0">
+									<i class="bx bx-receipt"></i>
+									<h4>Examination Simplified</h4>
+
+								</div>
+							</div>
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box mt-4 mt-xl-0">
+									<i class="bx bx-cube-alt"></i>
+									<h4>Cost Effective</h4>
+
+								</div>
+							</div>
+							<div class="col-xl-4 d-flex align-items-stretch">
+								<div class="icon-box mt-4 mt-xl-0">
+									<i class="bx bx-images"></i>
+									<h4>Result available at ease</h4>
+
+								</div>
+							</div>
+						</div>
+					</div><!-- End .content-->
+				</div>
+			</div>
+
+		</div>
+	</section><!-- End Why Us Section -->
+	<!-- ======= About Section ======= -->
+
+	<!-- cards -->
+	<section id="panels" class="panels">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Panels</h2>
+				<p>Portal consists of 3 panels, ADMIN, EXAMINER and STUDENT. WHO YOU ARE ? Choose accordingly</p>
+			</div>
+
+			<div id="cards-parent">
+				<div class="card" style="width: 18rem; margin-bottom: 20px ;">
+					<img class="card-img-top" src="/images/samplecard.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">STUDENT SECTION</h5>
+						<p class="card-text">Attemp Quiz, View Report, View Schedule</p>
+						<a id="student-login-btn" class="btn btn-primary">Click Here</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem; margin-bottom: 20px ">
+					<img class="card-img-top" src="/images/samplecard.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">EXAMINER SECTION</h5>
+						<p class="card-text"> Set View Edit - Questions , View Student Report</p>
+						<a id="examiner-login-btn" class="btn btn-primary">Click Here</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem; margin-bottom: 20px">
+					<img class="card-img-top" src="/images/samplecard.png" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">ADMIN SECTION</h5>
+						<p class="card-text">Create Accounts, Assign Roles to Students and Examiner, Manage Permission,
+							Edit Courses</p>
+						<a id="admin-login-btn" class="btn btn-primary">Click Here</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="doctors" class="doctors">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Project Guide</h2>
+				<p>"Better than a thousand days of diligent study is one day with a great teacher."</p>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-6 mt-4">
+					<div class="member d-flex ">
+						<div class="pic"><img src="/images/sampledp.png" class="img-fluid" alt=""></div>
+						<div class="member-info">
+							<h4>Mr. Rudragouda Patil</h4>
+							<span>Project Guide</span>
+							<p>Assistant Professor, MITAOE </p>
+							<div class="social">
+								<a href=""><i class="ri-twitter-fill"></i></a>
+								<a href=""><i class="ri-facebook-fill"></i></a>
+								<a href=""><i class="ri-instagram-fill"></i></a>
+								<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="doctors" class="doctors">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>Team</h2>
+				<p>“Teamwork is the ability to work together toward a common vision. The ability to direct individual
+					accomplishments toward organizational objectives. It is the fuel that allows common people to attain
+					uncommon results.”</p>
+			</div>
+
+			<div class="row">
+
+				<div class="col-lg-6">
+					<div class="member d-flex align-items-start">
+						<div class="pic"><img src="/images/sampledp.png" class="img-fluid" alt=""></div>
+						<div class="member-info">
+							<h4>Prathamesh Shirnath</h4>
+							<span>MERN Stack Developer</span>
+							<p> Student Of SY-BTECH MITAOE </p>
+							<div class="social">
+								<a href=""><i class="ri-twitter-fill"></i></a>
+								<a href=""><i class="ri-facebook-fill"></i></a>
+								<a href=""><i class="ri-instagram-fill"></i></a>
+								<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 mt-4 mt-lg-0">
+					<div class="member d-flex align-items-start">
+						<div class="pic"><img src="/images/sampledp.png" class="img-fluid" alt=""></div>
+						<div class="member-info">
+							<h4>Pavan Gayake</h4>
+							<span>Programmer</span>
+							<p>Student Of SY-BTECH MITAOE</p>
+							<div class="social">
+								<a href=""><i class="ri-twitter-fill"></i></a>
+								<a href=""><i class="ri-facebook-fill"></i></a>
+								<a href=""><i class="ri-instagram-fill"></i></a>
+								<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 mt-4">
+					<div class="member d-flex align-items-start">
+						<div class="pic"><img src="/images/sampledp.png" class="img-fluid" alt=""></div>
+						<div class="member-info">
+							<h4>Abhishek Nikam</h4>
+							<span> Developer</span>
+							<p>Student Of SY-BTECH MITAOE</p>
+							<div class="social">
+								<a href=""><i class="ri-twitter-fill"></i></a>
+								<a href=""><i class="ri-facebook-fill"></i></a>
+								<a href=""><i class="ri-instagram-fill"></i></a>
+								<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 mt-4">
+					<div class="member d-flex align-items-start">
+						<div class="pic"><img src="/images/sampledp.png" class="img-fluid" alt=""></div>
+						<div class="member-info">
+							<h4>Ashutosh Phanse</h4>
+							<span>Frontend Developer</span>
+							<p>Student Of SY-BTECH MITAOE </p>
+							<div class="social">
+								<a href=""><i class="ri-twitter-fill"></i></a>
+								<a href=""><i class="ri-facebook-fill"></i></a>
+								<a href=""><i class="ri-instagram-fill"></i></a>
+								<a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+		</div>
+	</section><!-- End Doctors Section -->
+
+	
+
+
+	<div id="cntct-bg">
+		<!-- contact -->
+		<section id="contact">
+			<div class="section-title">
+				<h2 style="color: white;"> Contact Us </h2>
+			</div>
+			<div id="contact-container">
+				<div class="c-divs">
+					<form id="contact-form">
+						<input type="text" name="name" placeholder="Your Name">
+						<input type="email" name="email" placeholder="Your E-mail">
+						<input type="text" name="msg" placeholder="Message">
+						<input type="submit" name="submit" value="Send Message">
+					</form>
+				</div>
+				<div class="c-divs">
+					<div>
+						<h3>About Us</h3>
+						<p>We are the students of SY-BTECH MIT Academy of Enginnering, Alandi. We developed a online
+							examination system for smooth and easy conduction of online exams. This is our minor project
+							of SY-BTECH </p>
+					</div>
+					<div>
+						<h3>Our Address</h3>
+						<ul id="add-list">
+							<li>MIT Academy of Enginnering, Pune</li>
+							<li>EMAIL ID:</li>
+							<li>prathamesh.shirnath@mitaoe.ac.in</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+
+	<section class="logins student">
+		<div class="login-container">
+			<span id="close-stud-mdl" class="close-mdl"> &times;</span>
+			<div class="login-div">
+				<h3>Student Sign In </h3>
+				<div class="white-bg">
+					<form action="/students/create-student-session" method="post">
+						<input type="username" name="username" placeholder="Username" required>
+						<input type="password" name="password" placeholder="Password" required>
+						<input type="submit" name="submit" value="Login">
+
+						<input type="checkbox" name="rem" value="Remember">
+						<label for="Remember"> Remember </label>
+						<a href="#">forgot password ? </a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="logins admin">
+		<div class="login-container">
+			<span id="close-admin-mdl" class="close-mdl"> &times;</span>
+			<div class="login-div">
+				<h3>Admin Sign In </h3>
+				<div class="white-bg">
+					<form action="/users/create-admin-session" method="post">
+						<input type="username" name="username" placeholder="Username" required>
+
+						<input type="password" name="password" placeholder="Password" required>
+						<input type="submit" name="submit" value="Login">
+
+						<input type="checkbox" name="rem" value="Remember">
+						<label for="Remember"> Remember </label>
+						<a href="#">forgot password ? </a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="logins examiner">
+		<div class="login-container">
+			<span id="close-examiner-mdl" class="close-mdl"> &times;</span>
+			<div class="login-div">
+				<h3>Examiner Sign In </h3>
+				<div class="white-bg">
+					<form action="/users/create-examiner-session" method="post">
+						<input type="username" name="username" placeholder="Username" required>
+
+						<input type="password" name="password" placeholder="Password" required>
+						<input type="submit" name="submit" value="Login">
+
+						<input type="checkbox" name="rem" value="Remember">
+						<label for="Remember"> Remember </label>
+						<a href="#">forgot password ? </a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ======= Footer ======= -->
+	<footer id="footer">
+
+		<div class="container d-md-flex py-4">
+
+			<div class="me-md-auto text-center text-md-start">
+				<div class="copyright">
+					&copy; Copyright <strong><span>Quizify</span></strong>. All Rights Reserved
+				</div>
+				<div class="credits">
+					<!-- All the links in the footer should remain intact. -->
+					<!-- You can delete the links only if you purchased the pro version. -->
+					<!-- Licensing information: https://bootstrapmade.com/license/ -->
+					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+					Designed by <a href="#">Group 44</a>
+				</div>
+			</div>
+			<div class="social-links text-center text-md-right pt-3 pt-md-0">
+				<a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+				<a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+				<a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+				<a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+				<a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+			</div>
+		</div>
+	</footer><!-- End Footer -->
+
+	<div id="preloader"></div>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+			class="bi bi-arrow-up-short"></i></a>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+	<script>
+		<% if (flash.success && flash.success.length > 0) {%>
+			new Noty({
+				theme: 'relax',
+				text: "<%= flash.success %>",
+				type: 'success',
+				layout: 'topRight',
+				timeout: 1500
+
+			}).show();    
+		<%} %>
+
+		<% if (flash.error && flash.error.length > 0) {%>
+			new Noty({
+				theme: 'relax',
+				text: "<%= flash.error %>",
+				type: 'error',
+				layout: 'topRight',
+				timeout: 1500
+
+			}).show();    
+		<%} %>
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.2/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.3/swiper-bundle.min.js"></script>
+	<script src="/js/homepage.js"></script>
+</body>

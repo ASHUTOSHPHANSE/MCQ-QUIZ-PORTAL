@@ -1,0 +1,73 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/admin/viewuser.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+<center>
+    <h2><b>
+            <%= title %>
+        </b></h2>
+</center>
+
+<div class="content">
+
+    <div class="container">
+        <h2 class="mb-5">No. of <%= viewhead %>
+        </h2>
+
+        <div class="table-responsive">
+
+            <table class="table table-striped custom-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Course</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">User Type</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Contact</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="view-user-table">
+                    <% for (i of user_student_list) {%>
+                        <tr scope="row" id="user-<%= i.id %>">
+                            <td>
+                                <%= i.course.coursename %>
+                            </td>
+                            <td>
+                                <%= i.firstname + " " + i.lastname %>
+                            </td>
+                            <td>
+                                <%= i.usertype %>
+                            </td>
+                            <td>
+                                <%= i.username %>
+                            </td>
+                            <td>
+                                <%= i.email %>
+                            </td>
+                            <td>
+                                <%= i.contact %>
+                            </td>
+                            <td>
+                                <%= i.createdAt.getDate()+"-"+(i.createdAt.getMonth()+1)+"-"+ i.createdAt.getFullYear()
+                                    %>
+                            </td>
+                            <td><a class="delete-user-button" href="/users/destroy/<%=i.id%>" class="more">Delete</a>
+                            </td>
+                        </tr>
+                        <% } %>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="/js/admin/viewuser.js"></script>

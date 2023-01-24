@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/css/examiner/examdetails.css">
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>
+                            <%= exams.name %>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% for (question of exams.questions) { %>
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">Q.&nbsp; </h3>
+                            <h5 class="mt-1 ml-2">
+                                <%= question.content %>
+                            </h5>
+                        </div> 
+                        <div class="ans ml-2">
+                            <h6> Marks     : <%= question.mark %> </h6> 
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.answer=="option1") { %>
+                                data-iscorrect="true"
+                            <%}%>> <span>
+                                    <%= question.option1 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.answer=="option2") { %>
+                                data-iscorrect="true"
+                            <%}%>> <span>
+                                    <%= question.option2 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.answer=="option3") { %>
+                                data-iscorrect="true"
+                            <%}%>>
+                                <span>
+                                    <%= question.option3 %>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="ans ml-2">
+                            <label class="radio"> <input type="radio" disabled <% if(question.answer=="option4") { %>
+                                data-iscorrect="true"
+                            <%}%>> <span>
+                                    <%= question.option4 %>
+                                </span>
+                            </label>
+                        </div>
+                
+                        <hr>
+                        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                            <button class="btn btn-primary d-flex align-items-center btn-danger" type="button">
+                                <a class="delete-question-button" href="/users/examiner/destroyQ/<%=question.id%>" class="more">
+                                    Delete
+                                </a>                                
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%} %>
+</div>

@@ -1,0 +1,60 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/examiner/addquestion.css">
+
+<div class="container1">
+  <form action="/users/examiner/create-question" method="post"> 
+    <h1><%= title %></h1>
+    <div class="form-group">
+      <select name="exam">
+        <% for (exam of exams) { %> 
+          <option value="<%=exam._id%>"><%= exam.name %></option>
+        <% } %>
+ 
+      </select>
+      <label for="select" class="control-label">Select Exam</label><i class="bar"></i>
+    </div>
+
+      <div class="form-group">
+        <textarea name="content" required="required"></textarea>
+        <label for="textarea" class="control-label">Question</label><i class="bar"></i>
+      </div>
+
+    <div class="form-group">
+      <input name="option1" type="text" required="required"/>
+      <label for="input" class="control-label">Option A</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+      <input name="option2" type="text" required="required"/>
+      <label for="input" class="control-label">Option B</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+      <input name="option3" type="text" required="required"/>
+      <label for="input" class="control-label">Option C</label><i class="bar"></i>
+    </div>
+    <div class="form-group">
+      <input name="option4" type="text" required="required"/>
+      <label for="input" class="control-label">Option D</label><i class="bar"></i>
+    </div>
+
+    <div class="form-group">
+      <input name="mark" type="number" required="required"/>
+      <label for="input" class="control-label">Mark</label><i class="bar"></i>
+    </div>
+
+  <div class="form-group">
+  <select name="answer">
+    <option value="option1">Option A</option>
+    <option value="option2">Option B</option>
+    <option value="option3">Option C</option>
+    <option value="option4">Option D</option>
+  </select>
+  <label for="select" class="control-label">Correct Answer</label><i class="bar"></i>
+</div>
+<input type="hidden" name="user" value="<%= user._id %>">
+<input type="hidden" name="course" value="<%= user.course%>">
+<div class="button-container">
+  <button type="submit" class="button"><span>Submit</span></button>
+</div>
+  </form>
+
+</div>

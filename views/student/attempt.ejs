@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/student/attempt.css">
+<script> let get = <%- JSON.stringify(exams) %>;
+         let studid = "<%= user._id %>"; </script>
+
+<div class="main-container">
+<div class="box" id="questionScreen" >
+    <span class="timerBox">Time Left : <span></span></span>
+                <div class="title">
+                    <%= exams.name %>
+                </div>
+
+
+                <div class="questionBox">
+                    What does HTML stand for?
+                </div>
+                <div class="optionBox">
+                    <span onclick="fillanswer(this)" data-opt="option1" data-marked="false"></span> <br>
+                    <span onclick="fillanswer(this)" data-opt="option2" data-marked="false"></span> <br>
+                    <span onclick="fillanswer(this)" data-opt="option3" data-marked="false"></span> <br>
+                    <span onclick="fillanswer(this)" data-opt="option4" data-marked="false"></span> 
+                    
+                </div>
+                <div class="footer">
+                    <button id="prev=btn" onclick="showPrevious()">
+                        PREVIOUS
+                    </button>
+                    <button id="next-btn" onclick="showNext()">
+                        NEXT
+                    </button>
+                    <button id="submit-btn" onclick="submitbtn()">
+                        SUBMIT
+                    </button>
+                </div>
+
+            </div>
+            <div class="box" id="resultScreen" style="display:none">
+                <div class="title">
+                    RESULT  FOR ADS QUIZ
+                </div>
+                <div class="resultBox">
+                    <label>Question : </label>
+                    <span id="totalQuestion">10</span>
+                    <label>Attempt : </label>
+                    <span id="attemptQuestion">0</span>
+                    <label>Correct : </label>
+                    <span id="correctAnswer">0</span>
+                    <label>Wrong: </label>
+                    <span id="wrongAnswer">0</span>
+                </div>
+                <div class="buttonBox">
+                    <a href="index.html">Start Again</a>
+                </div>
+            </div>
+        </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Activity detected</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Your test will be automatically submitted with 0 marks
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="/js/student/attempt.js"></script>

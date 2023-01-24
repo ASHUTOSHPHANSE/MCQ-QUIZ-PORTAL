@@ -1,0 +1,92 @@
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.profile-p {
+    width: 30%;
+    padding: 1em
+}
+.page-contain {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #E7F3F1;
+    border: .75em solid white;
+    padding: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.data-card {
+    width: 45%;
+    border-radius: .5em;
+    text-decoration: none;
+    background: white;
+    margin: 1em;
+    padding: 2.75em 2.5em  0 2.5em;
+    box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
+    transition: transform .45s ease, background .45s ease;
+}
+@media ( max-width: 650px) {
+    .data-card {
+        width: 100%;
+    }
+}
+
+h3 {
+    color: #2E3C40;
+    font-size: 3.5em;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: .5em;
+    margin: 0 0 0.142857143em;
+    border-bottom: 2px solid #753BBD;
+    transition: color .45s ease, border .45s ease;
+}
+
+h4 {
+    color: #627084;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.777777778em;
+    transition: color .45s ease;
+}
+
+.data-card:hover {
+    background: #753BBD;
+    transform: scale(1.02);
+}
+
+.data-card:hover h3 {
+    color: #ffffff;
+    border-bottom-color: #a754c4;
+}
+
+.data-card:hover h4 {
+    color: #ffffff;
+}
+@media screen and (max-width: 612px) {
+    .profile-p {
+        width: 100%;
+    }
+    .page-contain {
+        width: 100%;
+        padding: 1em;
+    }
+} 

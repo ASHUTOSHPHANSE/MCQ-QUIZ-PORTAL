@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="/css/student/dashboard.css">
+
+<center>
+  <h2><b>Dashboard </b></h2>
+</center>
+<div class="main-container">
+  <div class="col-md-8 profile-p">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Full Name</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.firstname + " " + user.lastname %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Email</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.email %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Username</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.username %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Mobile</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.contact %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">User Type</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            Student
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container table-cont">
+    <!-- Responsive Table Section -->
+    <table class="responsive-table">
+      <!-- Responsive Table Header Section -->
+      <thead class="responsive-table__head">
+        <tr class="responsive-table__row">
+          <th class="responsive-table__head__title responsive-table__head__title--name">Course</th>
+          <th class="responsive-table__head__title responsive-table__head__title--name">Exam Name</th>
+          <th class="responsive-table__head__title responsive-table__head__title--name">description</th>
+          <th class="responsive-table__head__title responsive-table__head__title--name">marks</th>
+          <th class="responsive-table__head__title responsive-table__head__title--name">Duration</th>
+          <th class="responsive-table__head__title responsive-table__head__title--name">Action</th>
+        </tr>
+      </thead>
+      <!-- Responsive Table Body Section -->
+      <tbody class="responsive-table__body">
+        <% for(i of exam) { %>
+          <tr class="responsive-table__row">
+            <td class="responsive-table__body__text responsive-table__body__text--name">
+              <%= i.course.coursename %>
+            </td>
+            <td class="responsive-table__body__text responsive-table__body__text--name">
+              <%= i.name %>
+            </td>
+            <td class="responsive-table__body__text responsive-table__body__text--name">
+              <%= i.description %>
+            </td>
+            <td class="responsive-table__body__text responsive-table__body__text--name">
+              <%= i.marks %>
+            </td>
+            <td class="responsive-table__body__text responsive-table__body__text--name">
+              <%= i.duration %> Min
+            </td>
+            <% if (user.attempts.includes(i._id)) { %>
+              <td> Already attempted </tr>
+            <% } else { %>
+            <td class="responsive-table__body__text responsive-table__body__text--name"><a class="attemp-button"
+                href="/students/attempt/<%=i.id%>" class="more">Attempt Quiz</a></td>
+          </tr>
+          <% } %>
+
+          <% } %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+<script src="/js/student/dashboard.js"></script>

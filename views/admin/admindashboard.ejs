@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="/css/admin/admindashboard.css">
+
+<center>
+  <h2><b>Dashboard </b></h2>
+</center>
+<div class="main-container">
+  <div class="col-md-8 profile-p">
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Full Name</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.firstname + " "+ user.lastname %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Email</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.email %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Username</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.username %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Mobile</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.contact %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">User Type</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= user.usertype %>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-4">
+            <h6 class="mb-0">Course</h6>
+          </div>
+          <div class="col-sm-8 text-secondary">
+            <%= course.coursename %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <section class="page-contain">
+      <div class="data-card">
+        <h3>
+          <%= no_of_students %>
+        </h3>
+        <h4>Students</h4>
+      </div>
+      <div class="data-card">
+        <h3>
+          <%= no_of_users %>
+        </h3>
+        <h4>Users</h4>
+      </div>
+      <div class="data-card">
+        <h3>
+          <%= no_of_courses %>
+        </h3>
+        <h4>course</h4>
+      </div>
+      <div class="data-card">
+        <h3>
+          <%= no_of_exams %>
+        </h3>
+        <h4>Exams</h4>
+      </div>
+      <div class="data-card">
+        <h3>
+          <%= no_of_questions %>
+        </h3>
+        <h4>Questions</h4>
+      </div>
+    </section>
+  </div>

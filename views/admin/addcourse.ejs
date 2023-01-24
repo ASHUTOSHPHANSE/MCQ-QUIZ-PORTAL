@@ -1,0 +1,30 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/admin/addcourse.css">
+<form action="/users/create-course" method="post">
+  <h1><%=title%></h1>
+  <!-- <div class="row">
+    <input type="checkbox" name="fancy-checkbox" id="fancy-checkbox"/>
+    <label for="fancy-checkbox">Checkbox</label>
+  </div>
+  
+  <div class="row">
+    <input type="radio" name="fancy-radio" id="fancy-radio-1"/>
+    <label for="fancy-radio-1">Radio</label>
+    
+    <input type="radio" name="fancy-radio" id="fancy-radio-2"/>
+    <label for="fancy-radio-2">Radio</label>
+  </div> -->
+  
+  <div class="row">
+    <input type="text" name="coursename" id="fancy-text" required/>
+    <label for="fancy-text">Name</label>
+  </div>
+  
+  <div class="row">
+    <textarea name="description" id="fancy-textarea" required></textarea>
+    <label for="fancy-textarea">Description</label>
+  </div>
+  
+  <button type="submit" tabindex="0">Submit</button>
+</form>
+
